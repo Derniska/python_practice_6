@@ -6,6 +6,7 @@ resp = requests.get('https://gsom.spbu.ru/en/')
 soup = BeautifulSoup(resp.content, 'html.parser')
 images = soup.find_all('img')
 pngs = [image for image in images if 'png' in str(image)]
+print(f'The website has {len(pngs)} png images ')
 link = pngs[0].attrs['src']
 
 url = 'https://gsom.spbu.ru' + link
