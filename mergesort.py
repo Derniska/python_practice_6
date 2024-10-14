@@ -34,3 +34,10 @@ def merge_sort(arr):
 print(f'The unsorted array is: \n{my_list1}.')
 merge_sort(my_list1)
 print(f'The sorted array is: \n {my_list1}')
+
+def timer_merge_sort(arr):
+    start = time.time()
+    merge_sort(arr)
+    finish = time.time()
+    time_complex = finish - start
+    print(time_complex)
